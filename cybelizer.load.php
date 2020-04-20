@@ -22,7 +22,7 @@ namespace Cybelizer;
 
 # Informações Gerais
 define("CYBELIZR_INFO", [
-    'VERSION'           => '2.003.20-1.806.13-alpha',
+    'VERSION'           => '2.003.31-1.806.13-alpha',
     'VNAME'             => 'Oxygen',
     'NAME'              => 'Cyblzr/2.003.20-Oxygen',
     'LICENSE'           => 'GNU General Public License version 3;http://www.gnu.org/licenses/',
@@ -31,5 +31,21 @@ define("CYBELIZR_INFO", [
     'BASEDIR'           => dirname(__FILE__)
 ]);
 
+# Caminhos de Recursos
+define("_CYPATHS", [
+    'APPDATA'       => CYBELIZR_INFO['BASEDIR'] . DIRECTORY_SEPARATOR . 'appdata' . DIRECTORY_SEPARATOR,
+    'CLASSES'       => CYBELIZR_INFO['BASEDIR'] . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR,
+    'CONFIG'        => CYBELIZR_INFO['BASEDIR'] . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR,
+    'CORE'          => CYBELIZR_INFO['BASEDIR'] . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR,
+    'LIB'           => CYBELIZR_INFO['BASEDIR'] . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR,
+    'THIRDY'        => CYBELIZR_INFO['BASEDIR'] . DIRECTORY_SEPARATOR . 'thirdparty' . DIRECTORY_SEPARATOR,
+    'PRIVATECONFIG'        => CYBELIZR_INFO['BASEDIR'] . '-private' . DIRECTORY_SEPARATOR
+]);
+
 # Timezone
 date_default_timezone_set('America/Sao_Paulo');
+
+# Inclui módulo de autoload para classes
+require_once _CYPATHS['CORE'] . 'core.splautoload.lib.php';
+
+#require_once _CYPATHS['APPDATA'] . '/testpage.php';
